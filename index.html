@@ -1,0 +1,490 @@
+
+<html>
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88070825-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88070825-1');
+</script>
+    
+<meta name="author" content="Juha Nurmonen" />
+<meta name="copyright" content="Juha Nurmonen" />
+<link rev="made" href="mailto:juha.nurmonen@haaga-helia.fi">
+<title>Homepage for Juha Nurmonen</title>
+<meta name="keywords" content="nurmonen, juha, hh juha, haaga-helia juha nurmonen">
+
+<!--
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+    background-color: #d0e4fe;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 35%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+</style>
+-->
+
+</head>
+
+<!--
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88062468-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+-->
+
+<script language="javascript">
+
+// <!--
+function opennew() {
+        window.open()
+}
+//-->
+
+
+</script>
+
+<script language="JavaScript">
+ function palauteIkkuna() {
+     var leveys=650;
+     var korkeus=400;
+     if (document.all) { // IE
+         var xMax = screen.width, yMax = screen.height;
+         leveys=800;
+     }
+     else if (document.layers) { // NS4
+         var xMax = window.outerWidth, yMax = window.outerHeight;
+         var leveys=800;
+         var korkeus=450;
+     }
+     else if (window.outerWidth > 0) { // NS7, MOZ
+         var xMax = window.outerWidth, yMax = window.outerHeight;
+     }
+     else {
+         var xMax = 1024, yMax=768;
+     }
+
+     var xOffset = (xMax - leveys)/2, yOffset = (yMax - korkeus)/2;
+     
+     window.open('cgi-bin/feed.html','FeedBack','width='+leveys+',height='+korkeus+',screenX='+xOffset+',screenY='+yOffset+',top='+yOffset+',left='+xOffset+''); 
+ }   
+ 
+//</script>
+
+<script language="JavaScript">
+
+function writeDateModified (time) {
+
+	// Routines written by John Gardner See www.braemoor.co.uk/software
+
+  var days = new Array;                        // Array to hold day names
+  var months = new Array;                      // Array to hold up month names
+
+  // Load up day names
+  days[0] = "Sunday";
+  days[1] = "Monday";
+  days[2] = "Tuesday";
+  days[3] = "Wednesday";
+  days[4] = "Thursday";
+  days[5] = "Friday";
+  days[6] = "Saturday";
+
+  // Load up month names
+  months[0] = "January";
+  months[1] = "February";
+  months[2] = "March";
+  months[3] = "April";
+  months[4] = "May";
+  months[5] = "June";
+  months[6] = "July";
+  months[7] = "August";
+  months[8] = "September";
+  months[9] = "October";
+  months[10] = "November";
+  months[11] = "December";
+
+  // Assign date variables with document.lastModified 
+  var modDate = new Date(Date.parse(document.lastModified));
+  
+  // If we have a valid date reformat it.
+  if (modDate != 0 && modDate != "Invalid Date") {
+  
+    // Set up day variable to hold the name of the day
+    var day = days[modDate.getDay()];
+    
+    // ndate variable holds day of month
+    var ndate = modDate.getDate();
+    
+    // Set up month variable to hold the name of the month
+    var month = months[modDate.getMonth()];
+    
+    // Get the year and if it is less than 1000 add 1900 to it.
+    var year = modDate.getYear();
+    if (year < 1000) year = year + 1900;
+    
+    // Load up the time variables if required
+    if (time) {
+      var hour = modDate.getHours().toString();
+      if (hour.length == 1) hour = "0" + hour; 
+      var minute = modDate.getMinutes().toString();
+      if (minute.length == 1) minute = "0" + minute;
+      var second = modDate.getSeconds().toString();
+      if (second.length == 1) second = "0" + second;
+    }
+    
+    // Display date and time document was last updated.
+    document.write(day + " " + ndate + " " + month + " " + year+ "  ");
+    if (time) {
+      document.write(hour + ":" + minute + ":" + second);
+    }
+  }
+	else document.write("not available");
+}
+
+</script>
+
+<body  bgcolor="#ffffff"   background="kuvat/pi.jpg" text="#000000"  
+link="#0906ff" vlink="#050399" alink="#ff0000">
+
+<!-- old logo
+src="./kuvat/HHlogoen.png"
+src="http://www.haaga-helia.fi/sites/all/themes/haagahelia/images/logo.png"
+-->
+
+<font face="Helvetica, Verdana, Arial, sans-serif">
+
+<table align=center  border=0 cellspacing=3
+cellpadding=6>
+<tr>
+<td valign="middle"><a href="https://webmyy.haagahelia.amk/"
+onMouseOver="window.status='HH Juha profile'; return true">
+<img src="./kuvat/jn_photo.jpg" 
+ align=top height=100 width=80 hspace=70 border=0 alt=" "></a>
+<td valign="middle"><h2>Homepage for <br>
+<!--
+<br><img src="./kuvat/jn_photo.jpg" 
+align=top height=100 width=150 hspace=70 border=0 alt=" "> <br> 
+-->
+Juha Nurmonen
+</h2>  
+<td valign="middle">
+<a href="http://www.haaga-helia.fi/"
+onMouseOver="window.status='Haaga-Helia University of Applied Sciences'; return true">
+<img src="https://www.haaga-helia.fi/themes/custom/hh/logo.png"
+ align=top height=100 width=130 hspace=70 border=0 alt=" "></a>
+</table>
+
+
+
+<hr><p>
+<ul>
+
+<li>
+<strong>Fields of professional expertise and interest include</strong> mathematics, computer science and statistics, as well as data analytics and their applications e.g. in finance.
+</li>
+
+<ul>
+<li><a href="https://www.linkedin.com/in/juhanurmonen/">LinkedIn profile</a></li>
+<li><a href="https://www.ecosia.org/search?method=index&q=juha%20nurmonen">Ecosia search for Juha Nurmonen</a>
+</ul>
+
+<li><b>Position</b>: <a
+href="./kuvat/atwork.html" 
+onMouseOver="window.status='Challenges in lectures'; 
+return true">senior lecturer</a></li>
+
+<!--
+<li><b>Professional interest</b>: <a
+href="http://webalt.math.helsinki.fi/"
+onMouseOver="window.status='Page for the project'; 
+return true"> WebALT: Web Advanced Learning Technologies</a>   
+<li><b><a href="http://www.helsinki.fi/~nurmonen/jn.html"
+onMouseOver="window.status='More on that'; 
+return true">Research
+interests</b></a>: <b><a
+href="http://www-mgi.informatik.rwth-aachen.de/FMT/"
+onMouseOver="window.status='Finite Model Theory homepage in Aachen'; 
+return true"> finite model theory</a></b> and <b><a
+href=http://www.cs.umass.edu/~immerman/descriptive_complexity.html
+onMouseOver="window.status='Descriptive Complexity page';  
+return true"> descriptive complexity theory</a></b> 
+-->
+
+<li><b>Courses taught</b>: 
+<ul>
+<!-- 
+<li><em><a href="http://www.haaga-helia.fi/fi/opinto-opas/koulutusohjelmat/liiketalouden-koulutusohjelma-helsinki-aikuiset/koulutusohjelma-rakenne">Heli09</a></em>:
+<a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/MAT8LH001"> Matematiikan johdantokurssi</a>, 
+<a href="http://www.haaga-helia.fi/fi/MAT8HH001">Talousmatematiikan verkkokurssi</a>, 
+<a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/MAT1LH001">Liike-el&auml;m&auml;n matematiikka 1</a>,
+ <a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/MAT2LH001"> Liike-el&auml;m&auml;n matematiikka 2</a>, <a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/MET2LH001"> Tilastolliset menetelm&auml;t</a>, <a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/FIE4LH003">Rahoituksen Excel- ja tietoj&auml;rjestelm&auml;sovellukset</a>, <a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/LOG4LH003"> Toimitusketjun hallinnan ty&ouml;kaluja</a>;
+-->
+
+    <li><a href="https://opinto-opas.haaga-helia.fi/course_unit/MAT8HH101">Talousmatematiikan perusteet</a>, 
+    <li><a href="https://opinto-opas.haaga-helia.fi/course_unit/ACF1LH101A">Liiketalouden matematiikka ACF1LH101A</a></li>
+    <li><a href="https://opinto-opas.haaga-helia.fi/course_unit/RDI1LH101C">Analysointiosaaminen RDI1LH101C</a></li>
+	<li><a href="https://opinto-opas.haaga-helia.fi/course_unit/ANA001TR1A">Liiketoiminnan analytiikan perusteet ANA001TR1A</a></li>
+	<li><a href="https://opinto-opas.haaga-helia.fi/course_unit/ANA004AS2A">Liiketoiminnan matematiikka ANA004AS2A</a></li>
+	<li><a href="https://opinto-opas.haaga-helia.fi/course_unit/ANA001AS2A">Data-analytiikka Pythonilla ANA001AS2A</a> &ndash; <a href="https://opinto-opas.haaga-helia.fi/course_unit/RDI2HM102">Data-analytics RDI2HM102</a></li>
+	<li><a href="https://opinto-opas.haaga-helia.fi/course_unit/ANA001AS2A">Todennäköisyyslaskenta ja -jakaumat ANA006AS2A</a></li>
+    <li><a href="https://opinto-opas.haaga-helia.fi/course_unit/ANA004AS3A">Rahoituslaskennan menetelmiä ANA004AS3A</a></li>
+    <li><a href="https://opinto-opas.haaga-helia.fi/course_unit/ANA005AS3A">Strategiset päätöksentekomallit ANA005AS3A</a></li>
+	 <li><a href="https://opinto-opas.haaga-helia.fi/course_unit/ANA006AS3A">Taloustieteen matemaattiset perusteet ANA006AS3A</a></li>
+    
+    <p>
+    <li>See also <a href="https://webmyy.haagahelia.amk/ana/kurssit/">Analytiikan osaamiskokonaisuudet</a></li>
+    </p>
+    <!--
+    <li><a href="https://opinto-opas.haaga-helia.fi/course_unit/MAT8LH103">Matematiikkaa finanssiosaajille MAT8LH103</a></li>
+    -->
+
+<!--
+<li><em><a href="http://www.haaga-helia.fi/fi/opinto-opas/koulutusohjelmat/liiketalouden-koulutusohjelma-helsinki-monimuoto/koulutusohjelman">Heli16</a></em>:
+ <a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/MAT8LH101">Matematiikan valmentavat opinnot</a>, 
+  <a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/ACF1LH101">Tuloksen tekijä</a>, <a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/RDI1LH101">Uuden kehittäjä</a>,
+	<a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/FIE8LH102">Rahoituslaskennan menetelmiä</a>, 
+	<a href="http://www.haaga-helia.fi/fi/opinto-opas/opintojaksokuvaukset/BUS8LH104">Toimitusketjun hallinta</a>, 
+	
+-->
+</ul>
+
+<li><strong>Author and editor</strong> of <a href="./Teaching/">online learning material</a>.
+
+<li><strong>Co-organiser</strong> of <a href="https://webmyy.haagahelia.amk/digiosaaja/digipiiri" 
+onMouseOver="window.status='Digital study group'; 
+    return true">digital study group 'Digipiiri'</a>.
+
+
+<!--
+<a
+href="http://mtl.uta.fi/Opetus/FMT/"
+onMouseOver="window.status='Page for the course'; 
+return true"> Johdatus &auml;&auml;rellisten mallien teoriaan</a>, 
+<a
+href="http://mtl.uta.fi/Opetus/LogiikkaII/"
+onMouseOver="window.status='Page for the course'; 
+return true"> Logiikka II</a>,  <a
+href="http://www.math.helsinki.fi/~logic/opetus/logiikka1/index.html"
+onMouseOver="window.status='Page for the course'; 
+return true"> Johdatus Logiikkaan</a>, <a
+href="http://mtl.uta.fi/Opetus/LogiikkaI/"
+onMouseOver="window.status='Page for the course'; 
+return true"> Logiikka I</a>,  <a
+href="http://mtl.uta.fi/Opetus/logic/predsem/"
+onMouseOver="window.status='Page for the course'; 
+return true"> Predikaattilogiikan semantiikka</a>.
+-->
+
+<!--
+<a
+href="http://www.math.helsinki.fi/kurssit/aemt"
+onMouseOver="window.status='Page for the course'; 
+return true"> &Auml;&auml;rellisten mallien teoria</a>
+-->
+
+<li><strong>Member</strong> of local teachers' union <a href="https://webmyy.haagahelia.amk/hhory/" 
+onMouseOver="window.status='Haaga-Helian opettajat HHO ry'; 
+return true">Haaga-Helian opettajat HHO ry</a>
+
+<li><strong><a href="https://www.helsinki.fi/fi/alumnille" 
+onMouseOver="window.status='Helsinki University Alumnus'; 
+return true">Alumnus</a></strong> of
+<a href="https://www.helsinki.fi/" 
+onMouseOver="window.status='University of Helsinki'; 
+return true">the University of Helsinki</a></strong>
+<ul>
+<li><a href="https://www.helsinki.fi/en/innovations-and-cooperation/decision-makers/researchmatters">Research matters</a>
+</ul>
+
+<!--
+<li><a href="http://myy.haaga-helia.fi/~nurju/koulutus/arjentietosuoja_todistus.pdf">Conscious</a> of GDPR matters, see e.g. <a href="https://arjentietosuoja.fi">Arjen tietosuojaa</a> (in Finnish)
+-->
+
+</ul>
+
+<hr><a href="https://1u.fi/juhanurmonen"
+onMouseOver="window.status='Personal site'; return true">&nbsp</a> 
+<hr>
+
+<h3><a name="continfo"><img
+src=./kuvat/palaut2.gif align=top height=30 width=40 hspace=5 border=0 alt=###>
+Contact information</h3>  
+
+<!-- Sairauspoissaolotoivotus 
+
+<DL>
+<DD> <strong>On sick leave and unreachable until further notice.</strong> After that</DD>
+</DL>
+
+-->
+
+<!-- Lomatoivotus 
+
+<DL>
+<DD> <strong>On seasonal leave and unreachable until mid-January 2022.</strong> After that </DD>
+</DL>
+
+-->
+
+
+<!-- Kesälomatoivotus 
+
+<DL>
+    <DD> <strong>On summer leave and unreachable until mid-August 2023.</strong> After that </DD>
+</DL>
+
+-->
+
+
+<table align=center width=80% border=2 cellspacing=3
+cellpadding=6><tr><td>
+<DL><DT> <strong>Address</strong>: 
+<!--
+<DD><a href="http://www.haaga-helia.fi/fi/koulutus/ammattikorkeakoulututkinnot/liiketalouden-koulutus-tradenomi"
+onMouseOver="window.status='Business Programmes'; return true"> 
+Business Programmes</a>
+-->
+<DD><a href=https://www.haaga-helia.fi/
+onMouseOver="window.status='Haaga-Helia homepage'; 
+return true"> Haaga-Helia University of Applies Sciences</a>
+
+<DD>
+<!--
+<a href=http://www.hel.fi/grafiikka/keskus.gif
+onMouseOver="window.status='Map of the city center'; return true">  
+
+<a href="http://www.helsinki.fi/kumpula/english/"
+onMouseOver="window.status='Kumpula Campus'; return true">  
+-->
+<a href="http://www.haaga-helia.fi/fi/tietoa-haaga-heliasta/yhteystiedot/pasila">Pasila Campus</a> / 
+<a href="http://maps.google.com/maps?q=ratapihantie+13,+helsinki,+finland">
+Ratapihantie 13</a>
+<DD>FI-00520 <a
+href=http://www.hel.fi/ 
+onMouseOver="window.status='Homepage of Helsinki'; return true">
+Helsinki</a> 
+<DD> <a href="http://www.finland.fi/"
+onMouseOver="windows.status='Visit Finland'; return true"> 
+Finland </a><P>
+<!--
+<DT><strong>E-mail</strong>: <a
+href="mailto:juha.nurmonen@haaga-helia.fi" 
+onMouseOver="window.status='Mail me'; return true">
+juha.nurmonen(a)haaga-helia.fi</a>
+</DL><P>
+<td valign="middle"><DL><DT> <strong>Office</strong>: 7029 (7th
+floor)
+<DT> <strong>Office hours</strong>: N/A <P>
+<DT> <strong>Assistants' duty room</strong> (425)
+<strong>hours</strong>: N/A <P> 
+<DT><strong>Telephone</strong>: (+358-9-) 191 22878
+<DT><strong>Telefax</strong>:   (+358-9-) 191 23213
+</DL>
+-->
+
+
+<td valign="middle"><DL><DT> <strong>Post</strong>: At <a href="http://www.haaga-helia.fi/fi/tietoa-haaga-heliasta/yhteystiedot/pasila">Pasila Campus</a>; <br />  available also at <a href="https://haaga-helia.zoom.us/my/juhanurmonen">Zoom online meeting room</a> (by appointment only)
+<DT><strong>E-mail</strong>: <a
+href="mailto:juha.nurmonen@haaga-helia.fi" 
+onMouseOver="window.status='Mail me'; return true">
+juha.nurmonen(a)haaga-helia.fi</a>
+
+<DT><P><strong><a href="https://e-lomake.haaga-helia.fi/lomakkeet/15431/lomake.html"
+onMouseOver="windows.status='Contact form'; return true">
+    Contact form</a></strong></P></DT>
+
+<!--
+<DT> <strong>Skype</strong>: <a href="skype: hh_juhanurmonen"  
+onMouseOver="window.status='Call me'; return true">
+hh_juhanurmonen</a>
+-->
+
+
+
+    <DT><strong>Office hours</strong>: Available by request, see my calendar at <a href="https://mynet.haaga-helia.fi/group/pakki/tilavaraukset">Peppi</a> &rightarrow; Calendar</DT>
+    <DT><P></P></DT>
+<DT><a href="https://t.me/hhjuhanurmonen"
+onMouseOver="window.status='Call me'; return true">
+Telegram Channel</a></DT>
+<DT><a href="https://t.me/haagahelia_hhjuhanurmonen"
+onMouseOver="window.status='Call me'; return true">
+Telegram Channel Group Chat</a></DT>
+<!-- <DT><strong>Telephone</strong>: N/A  +358 40 488 7026 -->
+</DL>
+</table>
+<hr>
+<hr>
+<a href="mailto:juha.nurmonen@haaga-helia.fi"
+onMouseOver="window.status='Mail me'; return true"><img
+src="http://www.haaga-helia.fi/~nurju/kuvat/maili.gif" align=top
+border=0 hspace=2 alt=" ">Juha Nurmonen
+&lt;juha.nurmonen(a)haaga-helia.fi&gt</a> 
+<!--
+- <a
+href="javascript:palauteIkkuna()">Feedback form</a>  
+-->
+<P><hr>
+
+<P><hr>
+<!-- Perusmuoto
+<script>
+document.write('Last modified: ');
+document.write(document.lastModified);
+</script> -->
+
+<font
+face="Verdana, Arial, Helvetica, sans-serif" size="2">
+<script type="text/javascript">
+document.write('Last modified: ');
+writeDateModified (true);</script>
+</font>
+
+<br>
+<a href="javascript: history.go(-1)"
+onMouseOver="window.status='Go back'; return true"><font
+face="Verdana, Arial, Helvetica, sans-serif" size="2">Back</font></a>
+</font>
+</body>
+</html>
